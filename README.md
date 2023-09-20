@@ -9,3 +9,6 @@
 | GET    | /api/v1.0/string   |   `{"string":"aaaaabcccc"}`      |        `{"result": {"a": 5,"c": 4,"b": 1 }}`    |
 | GET    | /api/v1.0/string   |     `{"string":""}`     |   `{"message": "string: minimum length is 1 character"}`    |
 
+### Test coverage
+
+**Service:** 83% methods, 96% lines

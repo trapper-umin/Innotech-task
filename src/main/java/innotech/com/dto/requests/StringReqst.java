@@ -5,9 +5,7 @@ import lombok.*;
 
 @Getter
 @Setter
-@Builder
 @AllArgsConstructor
-@NoArgsConstructor
 public class StringReqst {
 
     /**
@@ -17,5 +15,21 @@ public class StringReqst {
      */
     @Size(min = 1, message = "minimum length is 1 character")
     private String string;
+
+    public StringReqst(){}
+
+    public static class Builder{
+        private final StringReqst stringReqst=new StringReqst();
+
+        public Builder string(String string){
+            stringReqst.string=string;
+            return this;
+        }
+
+        public StringReqst build(){
+            return stringReqst;
+        }
+    }
+
 
 }

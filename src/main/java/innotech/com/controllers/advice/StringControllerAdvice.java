@@ -13,8 +13,8 @@ public class StringControllerAdvice {
     private ResponseEntity<ErrorResp> handleException(NotValidException e){
 
         return ResponseEntity.badRequest().body(
-                ErrorResp
-                        .builder()
+                new ErrorResp
+                        .Builder()
                         .message(e.getMessage())
                         .build()
         );

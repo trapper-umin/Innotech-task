@@ -28,8 +28,8 @@ public class StringService {
         }
 
         return ResponseEntity.ok(
-                MapResp
-                        .builder()
+                new MapResp
+                        .Builder()
                         .result(sortedMap(symbolQuantity))
                         .build()
         );
